@@ -1,82 +1,52 @@
-# Lightweight React Template for KAVIA
+# Simple Notes App (Frontend)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A minimalistic, light-themed React notes application. It lets you list, create, edit, and delete notes locally in the browser. No backend required.
 
 ## Features
+- List notes in a sidebar
+- Create new notes
+- Edit note title and content
+- Delete notes
+- Lightweight styling using the color scheme:
+  - Primary: `#1976d2`
+  - Secondary: `#424242`
+  - Accent: `#ffd600`
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Layout
+- Header with app name and quick “New” action
+- Sidebar with note list (sorted by last updated)
+- Main editor area for title and content
 
 ## Getting Started
 
-In the project directory, you can run:
+Install dependencies and run:
 
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+npm install
+npm start
 ```
 
-### Components
+Open http://localhost:3000 to view the app.
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+Run tests:
+```bash
+npm test
+```
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+Build for production:
+```bash
+npm run build
+```
 
-## Learn More
+## Notes Persistence
+Notes are kept in memory and mirrored to `localStorage` for convenience. Clearing site data will remove saved notes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tech
+- React 18
+- No UI framework; pure CSS
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Structure
+- `src/App.js` — Application layout and logic
+- `src/App.css` — Minimal styling and layout
+- `src/index.js` — App bootstrap
+- `src/index.css` — Base resets
